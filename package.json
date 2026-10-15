@@ -1,0 +1,29 @@
+{
+  "name": "rl-running",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reinforcement learning agents that teach themselves to run. PPO written from scratch in plain JavaScript - headless in Node, or live in the browser as a race between independently training agents.",
+  "keywords": [
+    "reinforcement-learning",
+    "ppo",
+    "locomotion",
+    "physics",
+    "running",
+    "from-scratch"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "serve": "node scripts/serve.mjs",
+    "train": "node scripts/train.mjs",
+    "bench": "node scripts/bench.mjs",
+    "chart": "node scripts/chart.mjs",
+    "play": "node scripts/play.mjs",
+    "gait": "node scripts/gait-strip.mjs",
+    "champion": "node scripts/champion.mjs"
+  }
+}

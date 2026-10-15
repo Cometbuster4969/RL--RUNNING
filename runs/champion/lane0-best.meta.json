@@ -1,0 +1,19 @@
+{
+  "steps": 1408512,
+  "greedyEvalMean": 20.244312229296487,
+  "trainedAt": "2026-10-15T07:20:44.266Z",
+  "args": {
+    "lanes": 2,
+    "steps": 1600000,
+    "minutes": 0,
+    "out": "runs/champion",
+    "seed": 1,
+    "evalEvery": 200000,
+    "hidden": [
+      64,
+      64
+    ],
+    "perturb": 0.02,
+    "quiet": true
+  }
+}
