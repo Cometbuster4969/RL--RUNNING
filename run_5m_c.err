@@ -1,0 +1,2 @@
+C:\Users\ayush\AppData\Local\Programs\Python\Python314\Lib\site-packages\brax\io\mjcf.py:480: UserWarning: Brax System, piplines and environments are not actively being maintained. Please see MJX for a well maintained JAX-based physics engine: https://github.com/google-deepmind/mujoco/tree/main/mjx. For a host of environments that use MJX, see: https://github.com/google-deepmind/mujoco_playground.
+  warnings.warn(

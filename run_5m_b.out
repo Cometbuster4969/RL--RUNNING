@@ -1,0 +1,27 @@
+warm_start | path=C:\Users\ayush\projects\train_walking\checkpoints\humanoid_latest.pkl | recorded_prior_steps=5190280 | critic=restored
+session_started | env=brax_humanoid (non-MJX, deprecated) backend=cpu | timesteps=5000000 num_envs=16 evals=20
+reward_shaping | forward_reward_weight=2.5 healthy_reward=1.0 ctrl_cost_weight=0.1 | rationale=alive bonus cut so locomotion pays more than standing still
+optimizer | learning_rate=0.00025 schedule=adaptive_kl desired_kl=0.01 | resume_from_step=5190280
+tracking | fwd_speed = mean(eval/episode_x_velocity) in m/s; up_steps recovered from eval/episode_reward_alive because brax reports eval/avg_episode_length at 2x the real step count
+| steps: 0         | reward: 2237.3   | up_steps: 265.0  | fwd_speed: 3.022   m/s | x_travel: 12.01  m | x_pos: 2019.60 | sps: nan     | stage: locomotion_emerging
+| steps: 263680    | reward: 2585.5   | up_steps: 301.0  | fwd_speed: 3.079   m/s | x_travel: 13.90  m | x_pos: 1877.56 | sps: 931.8   | stage: locomotion_emerging
+| steps: 527360    | reward: 4255.3   | up_steps: 452.5  | fwd_speed: 3.407   m/s | x_travel: 23.12  m | x_pos: 4747.85 | sps: 902.8   | stage: locomotion_emerging
+| steps: 791040    | reward: 4362.9   | up_steps: 458.2  | fwd_speed: 3.453   m/s | x_travel: 23.74  m | x_pos: 4961.49 | sps: 682.3   | stage: locomotion_emerging
+| steps: 1054720   | reward: 4486.3   | up_steps: 465.5  | fwd_speed: 3.500   m/s | x_travel: 24.44  m | x_pos: 5176.77 | sps: 664.1   | stage: locomotion_emerging
+| steps: 1318400   | reward: 4382.8   | up_steps: 450.0  | fwd_speed: 3.542   m/s | x_travel: 23.91  m | x_pos: 5052.58 | sps: 666.2   | stage: locomotion_emerging
+| steps: 1582080   | reward: 2397.9   | up_steps: 266.2  | fwd_speed: 3.248   m/s | x_travel: 12.97  m | x_pos: 2034.53 | sps: 643.7   | stage: locomotion_emerging
+| steps: 1845760   | reward: 2956.1   | up_steps: 309.0  | fwd_speed: 3.473   m/s | x_travel: 16.10  m | x_pos: 3243.27 | sps: 661.2   | stage: locomotion_emerging
+| steps: 2109440   | reward: 3111.9   | up_steps: 324.0  | fwd_speed: 3.489   m/s | x_travel: 16.96  m | x_pos: 3338.43 | sps: 645.7   | stage: locomotion_emerging
+| steps: 2373120   | reward: 4437.6   | up_steps: 444.2  | fwd_speed: 3.643   m/s | x_travel: 24.28  m | x_pos: 5080.16 | sps: 638.9   | stage: locomotion_emerging
+| steps: 2636800   | reward: 5168.2   | up_steps: 500.0  | fwd_speed: 3.781   m/s | x_travel: 28.36  m | x_pos: 6375.62 | sps: 644.9   | stage: locomotion_emerging
+| steps: 2900480   | reward: 2642.7   | up_steps: 271.5  | fwd_speed: 3.541   m/s | x_travel: 14.42  m | x_pos: 3178.03 | sps: 645.3   | stage: locomotion_emerging
+| steps: 3164160   | reward: 4167.6   | up_steps: 414.0  | fwd_speed: 3.674   m/s | x_travel: 22.82  m | x_pos: 4858.39 | sps: 649.1   | stage: locomotion_emerging
+| steps: 3427840   | reward: 5237.7   | up_steps: 500.0  | fwd_speed: 3.838   m/s | x_travel: 28.78  m | x_pos: 6495.79 | sps: 649.6   | stage: locomotion_emerging
+| steps: 3691520   | reward: 4301.3   | up_steps: 418.8  | fwd_speed: 3.757   m/s | x_travel: 23.60  m | x_pos: 4584.07 | sps: 646.0   | stage: locomotion_emerging
+| steps: 3955200   | reward: 4240.0   | up_steps: 410.0  | fwd_speed: 3.785   m/s | x_travel: 23.28  m | x_pos: 4998.37 | sps: 753.4   | stage: locomotion_emerging
+| steps: 4218880   | reward: 4019.9   | up_steps: 392.0  | fwd_speed: 3.750   m/s | x_travel: 22.05  m | x_pos: 4868.80 | sps: 771.9   | stage: locomotion_emerging
+| steps: 4482560   | reward: 4502.5   | up_steps: 437.2  | fwd_speed: 3.767   m/s | x_travel: 24.71  m | x_pos: 5166.44 | sps: 938.4   | stage: locomotion_emerging
+| steps: 4746240   | reward: 5306.9   | up_steps: 500.0  | fwd_speed: 3.895   m/s | x_travel: 29.21  m | x_pos: 6569.69 | sps: 928.4   | stage: locomotion_emerging
+| steps: 5009920   | reward: 4970.5   | up_steps: 473.0  | fwd_speed: 3.852   m/s | x_travel: 27.33  m | x_pos: 5834.87 | sps: 1085.1  | stage: locomotion_emerging
+session_finished | elapsed_seconds=7097.1 interrupted=False | session_steps=5009920 cumulative_steps=10200200 | avg_sps=705.9
+checkpoint_saved | path=C:\Users\ayush\projects\train_walking\checkpoints\humanoid_latest.pkl cumulative_steps=10200200

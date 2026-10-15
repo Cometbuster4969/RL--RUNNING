@@ -1,0 +1,28 @@
+warm_start | path=C:\Users\ayush\projects\train_walking\checkpoints\humanoid_latest.pkl | recorded_prior_steps=180360 | critic=restored
+session_started | env=brax_humanoid (non-MJX, deprecated) backend=cpu | timesteps=5000000 num_envs=16 evals=20
+reward_shaping | forward_reward_weight=2.5 healthy_reward=1.0 ctrl_cost_weight=0.1 | rationale=alive bonus cut so locomotion pays more than standing still
+tracking | fwd_speed = mean(eval/episode_x_velocity) in m/s; up_steps recovered from eval/episode_reward_alive because brax reports eval/avg_episode_length at 2x the real step count
+| steps: 0         | reward: 144.2    | up_steps: 99.8   | fwd_speed: 0.210   m/s | x_travel: 0.31   m | x_pos: 10.92   | sps: nan     | stage: falling_early
+| steps: 263680    | reward: 172.6    | up_steps: 72.8   | fwd_speed: 0.578   m/s | x_travel: 0.63   m | x_pos: 16.91   | sps: 787.4   | stage: locomotion_emerging
+| steps: 527360    | reward: 194.0    | up_steps: 69.5   | fwd_speed: 0.749   m/s | x_travel: 0.78   m | x_pos: 20.89   | sps: 1084.2  | stage: locomotion_emerging
+| steps: 791040    | reward: 318.3    | up_steps: 96.2   | fwd_speed: 0.957   m/s | x_travel: 1.38   m | x_pos: 53.88   | sps: 765.4   | stage: locomotion_emerging
+| steps: 1054720   | reward: 329.1    | up_steps: 88.8   | fwd_speed: 1.120   m/s | x_travel: 1.49   m | x_pos: 49.40   | sps: 754.9   | stage: locomotion_emerging
+| steps: 1318400   | reward: 493.9    | up_steps: 115.2  | fwd_speed: 1.351   m/s | x_travel: 2.34   m | x_pos: 110.15  | sps: 760.8   | stage: locomotion_emerging
+| steps: 1582080   | reward: 569.4    | up_steps: 114.8  | fwd_speed: 1.624   m/s | x_travel: 2.79   m | x_pos: 118.93  | sps: 745.7   | stage: locomotion_emerging
+| steps: 1845760   | reward: 642.2    | up_steps: 143.2  | fwd_speed: 1.427   m/s | x_travel: 3.07   m | x_pos: 190.10  | sps: 769.5   | stage: locomotion_emerging
+| steps: 2109440   | reward: 614.3    | up_steps: 127.0  | fwd_speed: 1.572   m/s | x_travel: 2.99   m | x_pos: 151.06  | sps: 827.3   | stage: locomotion_emerging
+| steps: 2373120   | reward: 735.3    | up_steps: 139.0  | fwd_speed: 1.754   m/s | x_travel: 3.66   m | x_pos: 242.24  | sps: 837.9   | stage: locomotion_emerging
+| steps: 2636800   | reward: 783.4    | up_steps: 142.8  | fwd_speed: 1.833   m/s | x_travel: 3.93   m | x_pos: 259.87  | sps: 832.9   | stage: locomotion_emerging
+| steps: 2900480   | reward: 862.6    | up_steps: 156.2  | fwd_speed: 1.846   m/s | x_travel: 4.33   m | x_pos: 294.20  | sps: 741.9   | stage: locomotion_emerging
+| steps: 3164160   | reward: 970.5    | up_steps: 159.2  | fwd_speed: 2.078   m/s | x_travel: 4.96   m | x_pos: 338.44  | sps: 801.0   | stage: locomotion_emerging
+| steps: 3427840   | reward: 1149.0   | up_steps: 177.5  | fwd_speed: 2.230   m/s | x_travel: 5.94   m | x_pos: 502.91  | sps: 710.1   | stage: locomotion_emerging
+| steps: 3691520   | reward: 1376.8   | up_steps: 198.0  | fwd_speed: 2.423   m/s | x_travel: 7.19   m | x_pos: 650.18  | sps: 717.4   | stage: locomotion_emerging
+| steps: 3955200   | reward: 2158.6   | up_steps: 289.2  | fwd_speed: 2.627   m/s | x_travel: 11.40  m | x_pos: 1566.08 | sps: 714.2   | stage: locomotion_emerging
+| steps: 4218880   | reward: 1340.8   | up_steps: 184.0  | fwd_speed: 2.559   m/s | x_travel: 7.06   m | x_pos: 739.43  | sps: 713.2   | stage: locomotion_emerging
+| steps: 4482560   | reward: 2501.9   | up_steps: 299.5  | fwd_speed: 2.985   m/s | x_travel: 13.41  m | x_pos: 2208.95 | sps: 721.6   | stage: locomotion_emerging
+| steps: 4746240   | reward: 2612.9   | up_steps: 303.0  | fwd_speed: 3.095   m/s | x_travel: 14.07  m | x_pos: 2178.12 | sps: 722.5   | stage: locomotion_emerging
+| steps: 5009920   | reward: 1872.0   | up_steps: 229.2  | fwd_speed: 2.911   m/s | x_travel: 10.01  m | x_pos: 1377.40 | sps: 723.1   | stage: locomotion_emerging
+session_finished | elapsed_seconds=6696.3 interrupted=False | session_steps=5009920 cumulative_steps=5190280 | avg_sps=748.2
+checkpoint_saved | path=C:\Users\ayush\projects\train_walking\checkpoints\humanoid_latest.pkl cumulative_steps=5190280
+deterministic_rollout | up_steps=214 fwd_speed=2.832 m/s x_travel=9.09 m reward=1708.5 | stage=locomotion_emerging
+verdict | locomotion_emerging at 2.832 m/s over 214 upright steps

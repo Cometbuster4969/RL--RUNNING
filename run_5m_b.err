@@ -1,0 +1,8 @@
+C:\Users\ayush\AppData\Local\Programs\Python\Python314\Lib\site-packages\brax\io\mjcf.py:480: UserWarning: Brax System, piplines and environments are not actively being maintained. Please see MJX for a well maintained JAX-based physics engine: https://github.com/google-deepmind/mujoco/tree/main/mjx. For a host of environments that use MJX, see: https://github.com/google-deepmind/mujoco_playground.
+  warnings.warn(
+E1001 10:27:51.140613   20164 contiguous_section_memory_manager.cc:105] allocateMappedMemory failed with error: The paging file is too small for this operation to complete.
+E1001 10:27:51.140664   31628 contiguous_section_memory_manager.cc:105] allocateMappedMemory failed with error: The paging file is too small for this operation to complete.
+E1001 10:27:51.149553   20164 contiguous_section_memory_manager.cc:148] Failed to satisfy suballocation request for 545
+E1001 10:27:51.150182   31628 contiguous_section_memory_manager.cc:148] Failed to satisfy suballocation request for 100
+LLVM ERROR: Unable to allocate section memory!
+LLVM ERROR: Unable to allocate section memory!
