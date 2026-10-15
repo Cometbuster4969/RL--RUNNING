@@ -1,0 +1,242 @@
+{
+  "source": "champion/lane0-best.json",
+  "sourcePath": "runs/champion/lane0-best.json",
+  "sourceRun": "runs/champion",
+  "steps": 1600000,
+  "score": 22.090000000000003,
+  "greedy": {
+    "episodes": 16,
+    "meanDistance": 20.508,
+    "medianDistance": 20.454,
+    "bestDistance": 21.466,
+    "meanSpeed": 1.368,
+    "bestEpisodeSpeed": 1.431,
+    "fallRate": 0,
+    "groundContact": 0.57,
+    "airborne": 0.43,
+    "results": [
+      {
+        "distance": 20.838,
+        "time": 15,
+        "meanSpeed": 1.39,
+        "peakSpeed": 3,
+        "groundContact": 0.584,
+        "airborne": 0.416,
+        "fell": false
+      },
+      {
+        "distance": 20.712,
+        "time": 15,
+        "meanSpeed": 1.381,
+        "peakSpeed": 2.9,
+        "groundContact": 0.573,
+        "airborne": 0.427,
+        "fell": false
+      },
+      {
+        "distance": 19.272,
+        "time": 15,
+        "meanSpeed": 1.285,
+        "peakSpeed": 2.907,
+        "groundContact": 0.584,
+        "airborne": 0.416,
+        "fell": false
+      },
+      {
+        "distance": 20.418,
+        "time": 15,
+        "meanSpeed": 1.361,
+        "peakSpeed": 2.965,
+        "groundContact": 0.569,
+        "airborne": 0.431,
+        "fell": false
+      },
+      {
+        "distance": 20.398,
+        "time": 15,
+        "meanSpeed": 1.36,
+        "peakSpeed": 2.775,
+        "groundContact": 0.582,
+        "airborne": 0.418,
+        "fell": false
+      },
+      {
+        "distance": 21.074,
+        "time": 15,
+        "meanSpeed": 1.405,
+        "peakSpeed": 2.856,
+        "groundContact": 0.581,
+        "airborne": 0.419,
+        "fell": false
+      },
+      {
+        "distance": 20.892,
+        "time": 15,
+        "meanSpeed": 1.394,
+        "peakSpeed": 3.035,
+        "groundContact": 0.568,
+        "airborne": 0.432,
+        "fell": false
+      },
+      {
+        "distance": 20.076,
+        "time": 15,
+        "meanSpeed": 1.339,
+        "peakSpeed": 2.918,
+        "groundContact": 0.558,
+        "airborne": 0.442,
+        "fell": false
+      },
+      {
+        "distance": 19.901,
+        "time": 15,
+        "meanSpeed": 1.327,
+        "peakSpeed": 2.966,
+        "groundContact": 0.559,
+        "airborne": 0.441,
+        "fell": false
+      },
+      {
+        "distance": 19.653,
+        "time": 15,
+        "meanSpeed": 1.31,
+        "peakSpeed": 2.813,
+        "groundContact": 0.562,
+        "airborne": 0.438,
+        "fell": false
+      },
+      {
+        "distance": 21.466,
+        "time": 15,
+        "meanSpeed": 1.431,
+        "peakSpeed": 2.983,
+        "groundContact": 0.57,
+        "airborne": 0.43,
+        "fell": false
+      },
+      {
+        "distance": 20.361,
+        "time": 15,
+        "meanSpeed": 1.358,
+        "peakSpeed": 3.06,
+        "groundContact": 0.572,
+        "airborne": 0.428,
+        "fell": false
+      },
+      {
+        "distance": 20.454,
+        "time": 15,
+        "meanSpeed": 1.365,
+        "peakSpeed": 2.882,
+        "groundContact": 0.563,
+        "airborne": 0.437,
+        "fell": false
+      },
+      {
+        "distance": 19.976,
+        "time": 15,
+        "meanSpeed": 1.333,
+        "peakSpeed": 2.8,
+        "groundContact": 0.564,
+        "airborne": 0.436,
+        "fell": false
+      },
+      {
+        "distance": 21.232,
+        "time": 15,
+        "meanSpeed": 1.416,
+        "peakSpeed": 2.906,
+        "groundContact": 0.57,
+        "airborne": 0.43,
+        "fell": false
+      },
+      {
+        "distance": 21.412,
+        "time": 15,
+        "meanSpeed": 1.427,
+        "peakSpeed": 3.011,
+        "groundContact": 0.558,
+        "airborne": 0.442,
+        "fell": false
+      }
+    ],
+    "score": 23.19
+  },
+  "sampled": {
+    "episodes": 5,
+    "meanDistance": 16.736,
+    "medianDistance": 16.56,
+    "bestDistance": 18.365,
+    "meanSpeed": 1.115,
+    "bestEpisodeSpeed": 1.225,
+    "fallRate": 0,
+    "groundContact": 0.605,
+    "airborne": 0.395,
+    "results": [
+      {
+        "distance": 18.365,
+        "time": 15,
+        "meanSpeed": 1.225,
+        "peakSpeed": 2.621,
+        "groundContact": 0.604,
+        "airborne": 0.396,
+        "fell": false
+      },
+      {
+        "distance": 16.891,
+        "time": 15,
+        "meanSpeed": 1.125,
+        "peakSpeed": 2.661,
+        "groundContact": 0.586,
+        "airborne": 0.414,
+        "fell": false
+      },
+      {
+        "distance": 15.865,
+        "time": 15,
+        "meanSpeed": 1.057,
+        "peakSpeed": 2.854,
+        "groundContact": 0.658,
+        "airborne": 0.342,
+        "fell": false
+      },
+      {
+        "distance": 15.997,
+        "time": 15,
+        "meanSpeed": 1.066,
+        "peakSpeed": 2.628,
+        "groundContact": 0.551,
+        "airborne": 0.449,
+        "fell": false
+      },
+      {
+        "distance": 16.56,
+        "time": 15,
+        "meanSpeed": 1.103,
+        "peakSpeed": 2.62,
+        "groundContact": 0.624,
+        "airborne": 0.376,
+        "fell": false
+      }
+    ],
+    "score": 18.79
+  },
+  "producedAt": "2026-10-15T07:35:17.153Z",
+  "args": {
+    "dirs": [
+      "runs/final",
+      "runs/champion",
+      "runs/main"
+    ],
+    "out": "runs/champion",
+    "outName": "champion.json",
+    "episodes": 16,
+    "seed": 4242,
+    "train": false,
+    "minutes": 8,
+    "lanes": 4,
+    "steps": 0,
+    "force": true,
+    "quiet": false
+  }
+}

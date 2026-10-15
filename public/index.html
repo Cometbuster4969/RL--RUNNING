@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RL--RUNNING &middot; agents learning to run</title>
+    <meta
+      name="description"
+      content="Reinforcement learning agents teach themselves to run. PPO written from scratch, simulated and visualised live in your browser."
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <div>
+          <h1>RL<wbr />--<wbr />RUNNING</h1>
+          <p class="tagline">
+            Agents teach themselves to run. PPO from scratch &mdash; no ML libraries, no pretrained weights.
+          </p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="btn-start" class="primary">Start</button>
+        <button id="btn-reset" class="ghost" title="Reinitialise every lane and start learning from scratch">Reset</button>
+        <button
+          id="btn-champion"
+          class="ghost"
+          title="Warm start every agent from the reference policy trained on this machine (fetched from runs/champion)"
+        >
+          Load champion
+        </button>
+        <div class="segmented" role="group" aria-label="Animation speed">
+          <button data-speed="1" class="active">1&times;</button>
+          <button data-speed="2">2&times;</button>
+          <button data-speed="4">4&times;</button>
+          <button data-speed="8">8&times;</button>
+        </div>
+        <label class="field">
+          <span>Lanes</span>
+          <select id="lane-count">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Watch vs train</span>
+          <select id="mode">
+            <option value="turbo" selected>Turbo training</option>
+            <option value="watch">Watch only</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="track" id="track" aria-label="Training lanes"></section>
+
+      <section class="panels">
+        <div class="panel">
+          <h2>Leaderboard</h2>
+          <p class="hint">Ranked by the pace of the agent on screen right now.</p>
+          <table class="board" id="board">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Agent</th>
+                <th class="num">Pace</th>
+                <th class="num">Km/h</th>
+                <th class="num">Best run</th>
+                <th class="num">Steps</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="panel">
+          <h2>Learning curve</h2>
+          <p class="hint">
+            Distance travelled per episode while training. Every dot is one finished episode; the thick line is the
+            running best, and the faint line is a 20-episode average.
+          </p>
+          <canvas id="chart" width="900" height="360"></canvas>
+        </div>
+
+        <div class="panel log-panel">
+          <h2>What is happening</h2>
+          <p class="hint">Live commentary, newest first.</p>
+          <ul id="log" class="log"></ul>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="panel">
+          <h2>How it works</h2>
+          <p>
+            Each lane is an <strong>independent learner</strong>: its own 7-body physics simulation, its own little neural
+            network, its own optimiser. They start from random weights and share nothing but the CPU.
+          </p>
+          <ul class="bullets">
+            <li>
+              <strong>Simulation.</strong> A planar rigid-body engine written from scratch: capsules, revolute joints
+              with torque-limited motors and hard stops, Coulomb friction against the ground. It runs 5 physics
+              substeps per control step at 60&nbsp;Hz.
+            </li>
+            <li>
+              <strong>Parts.</strong> One trunk, two legs (thigh, shin, foot) &rarr; 6 actuated joints. The policy
+              outputs a target angle for each joint; the motor does the rest.
+            </li>
+            <li>
+              <strong>Observations (23).</strong> Trunk lean and speed, hip height, all six joint angles and speeds, two
+              foot-contact flags, and a gait-phase clock.
+            </li>
+            <li>
+              <strong>Reward (per second).</strong> Forward speed, plus a flight-phase bonus for running with both feet
+              off the ground, minus lean, squatting, effort and jerk; falling costs a flat penalty and ends the episode.
+            </li>
+            <li>
+              <strong>Learning.</strong> PPO with GAE, 64&times;64 tanh trunk, gradient norms clipped to 0.5. The
+              backward pass is written by hand and gradient-checked in the test suite.
+            </li>
+          </ul>
+          <p class="hint">
+            The robot on screen is the lane's current policy &mdash; watch mode replays it at human speed while the
+            learner behind it keeps churning through episodes.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h2>Reading the race</h2>
+          <ul class="bullets">
+            <li>Amber dots at the feet mark ground contact. A flash of the &ldquo;FLIGHT&rdquo; badge means both feet were off the ground at speed &mdash; that is running.</li>
+            <li>The first thing every agent learns is to not fall over. Distance stays near zero for a while, then jumps.</li>
+            <li>Agents often find a shuffling gait first, then abandon it for a real stride once shuffling stops paying.</li>
+            <li>Two agents with the same reward will find different solutions. That is why there are lanes.</li>
+          </ul>
+          <p class="hint" id="perf-note"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>PPO &middot; GAE &middot; planar rigid bodies &middot; zero dependencies</span>
+      <span id="footer-stats"></span>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+node_modules/
+*.log
+.DS_Store
+
+# Training output. Only the shipped reference champion is committed; every other
+# run directory stays local. Regenerate one with:
+#   node scripts/train.mjs --lanes 2 --steps 800000 --out runs/main
+runs/*
+!runs/README.md
+!runs/champion/
